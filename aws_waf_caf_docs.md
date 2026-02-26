@@ -44,27 +44,27 @@
 
 ## Task 3 – Apply the AWS Cloud Adoption Framework (CAF)
 
-### Business Perspective (~165 words)
+### Business Perspective
 The organization is motivated to adopt AWS for better scalability, reduced infrastructure costs, and faster delivery. However, maturity remains partial — no formal cloud value roadmap, TCO/ROI model, or defined KPIs (e.g., uptime gains, faster time-to-market, customer satisfaction). Business stakeholders recognize cloud benefits but lack quantified justification or executive alignment.  
 **Key actions/enablers:** Establish strong executive sponsorship, develop a business case with AWS TCO/ROI tools, define success metrics, and align cloud goals with revenue growth and competitiveness. This ensures the migration delivers strategic value beyond IT cost savings.
 
-### People Perspective (~160 words)
+### People Perspective
 The IT team has strong on-premises experience but limited AWS/cloud-native skills (e.g., VPC, managed services, IaC). Roles are still traditional; change management is weak.  
 **Key actions/enablers:** Invest in upskilling via AWS Skill Builder, certifications, workshops, and labs. Establish a Cloud Center of Excellence (CCoE), mentorship, and agile/DevOps practices. Redefine roles for shared responsibility. Effective training and communication will reduce resistance and enable the team to operate the new architecture confidently.
 
-### Governance Perspective (~170 words)
+### Governance Perspective
 No cloud-specific policies exist (tagging, budgeting, compliance), risking uncontrolled costs and security gaps.  
 **Key actions/enablers:** Define mandatory tagging, budget alerts, SCPs via AWS Organizations, and lifecycle policies. Use AWS Control Tower for landing zone guardrails and Trusted Advisor for best practices. Involve finance/procurement in variable pricing education. Mandate periodic Well-Architected reviews. Strong governance will support secure, compliant scaling post-migration.
 
-### Platform Perspective (~158 words)
+### Platform Perspective
 Current setup is functional but not highly available, automated, or cloud-native (single-AZ, manual ops).  
 **Key actions/enablers:** Adopt Multi-AZ, load balancing, Auto Scaling, and IaC (CloudFormation). Standardize VPC patterns (public/private subnets, NAT), use managed services (RDS Multi-AZ, ALB), and implement CI/CD pipelines. This creates a repeatable, resilient platform foundation for the improved architecture.
 
-### Security Perspective (~175 words)
+### Security Perspective
 Security maturity is low — still using perimeter-based thinking instead of cloud-native controls. Open ports and manual SSH persist from on-prem habits.  
 **Key actions/enablers:** Embrace Shared Responsibility Model. Enforce least-privilege IAM roles, encrypt data (KMS/ACM), use private subnets, Security Groups/NACLs, and AWS WAF on ALB. Enable CloudTrail, GuardDuty, Security Hub for visibility. Define compliance early (e.g., GDPR/PCI). This shifts to proactive, secure-by-design posture.
 
-### Operations Perspective (~162 words)
+### Operations Perspective
 Operations rely on manual maintenance; monitoring is reactive.  
 **Key actions/enablers:** Move to proactive CloudWatch metrics/alarms/dashboards, automated patching (Systems Manager), runbooks, and incident response plans. Define RPO/RTO and test DR. Automate deployments and reviews. This reduces downtime, improves reliability, and aligns with Operational Excellence.
 
@@ -94,10 +94,10 @@ This matches AWS best practices for two-tier apps (public-facing ALB → private
 
 The design fully addresses Task 1 risks (single-AZ, open ports, no scaling, no CDN, etc.) and supports CAF perspectives (managed services reduce People/Operations effort; standardized pattern aids Governance/Platform).
 
-## Brief Reflection (152 words)
+## Brief Reflection
 After earning my Cloud Practitioner certification, this lab connected theory to practice. I finally saw how the five Well-Architected pillars apply to real workloads — not just exam memorization. The “aha” moment was realizing a simple lift-and-shift isn’t enough; high availability, least-privilege security, and cost awareness must be built in from day one. The CAF section showed migration success depends as much on people, governance, and business alignment as on technology. Drawing the improved architecture felt like real cloud architect work — balancing pillars and trade-offs. I now understand why AWS stresses “build it right the first time.” This transformed my CCP knowledge into practical thinking. Thank you for the opportunity!
 
 **References**  
-- AWS Well-Architected Framework  
+- [!https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html](AWS Well-Architected Framework)
 - AWS Cloud Adoption Framework  
 - AWS VPC / ALB / RDS / Auto Scaling best practices documentation
